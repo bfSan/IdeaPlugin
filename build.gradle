@@ -3,12 +3,22 @@ plugins {
     id 'org.jetbrains.intellij' version '0.3.12'
 }
 
+// 这两个插件是必备
+apply plugin: 'idea'
+apply plugin: 'org.jetbrains.intellij'
+//编译java必备
+apply plugin: 'java'
+
 group 'com.iwhalecloud.zsmart'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
 
 repositories {
+    //ali repo
+    maven {
+        url 'http://maven.aliyun.com/nexus/content/groups/public/'
+    }
     mavenCentral()
 }
 
